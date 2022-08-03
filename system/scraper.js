@@ -6,6 +6,78 @@ const { fromBuffer } = require('file-type')
 global.creator = `@wox_bella`
 
 module.exports = class Scraper {
+  
+   
+ /*
+   ======= apkgoogle
+   */
+    apkgoogle(q) {
+      return new Promise(async (resolve, reject) => {
+         try {
+            let html = await (await axios.get('https://apkgoogle.org/fr/?s=' + q)).data
+            let $ = cheerio.load(html)
+            let content = []
+            let title = []
+            $('a.sidebar-a').each((i, e) => content.push($(e).attr('href')))
+            $('a.sidebar-a').each((i, e) => title.push($(e).attr('title')))
+ 
+            if (content.lenght == 0) return resolve({
+               creator: global.creator,
+               status: false
+            })
+            resolve({
+               creator: global.creator,
+               status: true,
+               data: {
+                  content: content,
+                  title: title,
+               }
+            })
+         } catch (e) {
+            console.log(e)
+            resolve({
+               creator: global.creator,
+               status: false
+            })
+         }
+      })
+   }
+   
+   
+   /*
+   ======= apkgoogledl
+   */
+    apkgoogledl(url){
+      return new Promise(async (resolve, reject) => {
+         try {
+            let html = await (await axios.get( url + '')).data
+            let $ = cheerio.load(html)
+            let content = []
+            let title = []
+            $('p.gt-block strong a').each((i, e) => content.push($(e).attr('href')))
+             $('div.short-detail h3').each((i, e) => title.push($(e).text()))
+ 
+            if (content.lenght == 0) return resolve({
+               creator: global.creator,
+               status: false
+            })
+            resolve({
+               creator: global.creator,
+               status: true,
+               data: {
+                  content: content[0],
+                  title: title[0].trim(),
+               }
+            })
+         } catch (e) {
+            console.log(e)
+            resolve({
+               creator: global.creator,
+               status: false
+            })
+         }
+      })
+   } 
    
    
  /*
