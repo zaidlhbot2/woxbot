@@ -35,7 +35,7 @@ exports.run = {
       // urbn 
       if (command == 'apkgoogle') {
        
-       client.reply(m.chat, ` جاري التحميل| تابعني على الانستغرام Instagram.com/wox_bella `, m)
+       client.reply(m.chat, ` جاري التحميل| تابعني على الانستغرام https://www.instagram.com/zaid_lh_00/ `, m)
       if (!text) return client.reply(m.chat, Func.example(isPrefix, command, command != 'artinama' ? 'yntkts' : 'wildan'), m)
       let json = await scrap.apkgoogle(text)
      //  command != 'artinama' ? client.reply(m.chat, `${json.data.content}`, m) : client.reply(m.chat, `${json.data.content}`, m)
@@ -43,52 +43,52 @@ exports.run = {
                       {
                         title: json.data.title[0],
                         rowId: `${isPrefix}apkgoogledl ` + json.data.content[0],
-                        description: 'follow me on instagrm : wox_bella'
+                        description: 'follow me on instagrm : zaid_lh_00'
                      },
                     {
                         title: json.data.title[1],
                         rowId: `${isPrefix}apkgoogledl ` + json.data.content[1],
-                        description: 'follow me on instagrm : wox_bella'
+                        description: 'follow me on instagrm : zaid_lh_00'
                      },
                      {
                         title: json.data.title[2],
                         rowId: `${isPrefix}apkgoogledl ` + json.data.content[2],
-                        description: 'follow me on instagrm : wox_bella'
+                        description: 'follow me on instagrm : zaid_lh_00'
                      },
                      {
                         title: json.data.title[3],
                         rowId: `${isPrefix}apkgoogledl ` + json.data.content[3],
-                        description: 'follow me on instagrm : wox_bella'
+                        description: 'follow me on instagrm : zaid_lh_00'
                      },
                       {
                         title: json.data.title[4],
                         rowId: `${isPrefix}apkgoogledl ` + json.data.content[4],
-                        description: 'follow me on instagrm : wox_bella'
+                        description: 'follow me on instagrm : zaid_lh_00'
                      },
                      {
                         title: json.data.title[5],
                         rowId: `${isPrefix}apkgoogledl ` + json.data.content[5],
-                        description: 'follow me on instagrm : wox_bella'
+                        description: 'follow me on instagrm : zaid_lh_00'
                      },
                       {
                         title: json.data.title[6],
                         rowId: `${isPrefix}apkgoogledl ` + json.data.content[6],
-                        description: 'follow me on instagrm : wox_bella'
+                        description: 'follow me on instagrm : zaid_lh_00'
                      },
                       {
                         title: json.data.title[7],
                         rowId: `${isPrefix}apkgoogledl ` + json.data.content[7],
-                        description: 'follow me on instagrm : wox_bella'
+                        description: 'follow me on instagrm : zaid_lh_00'
                      },
              {
                         title: json.data.title[8],
                         rowId: `${isPrefix}apkgoogledl ` + json.data.content[8],
-                        description: 'follow me on instagrm : wox_bella'
+                        description: 'follow me on instagrm : zaid_lh_00'
                      },
              {
                         title: json.data.title[9],
                         rowId: `${isPrefix}apkgoogledl ` + json.data.content[9],
-                        description: 'follow me on instagrm : wox_bella'
+                        description: 'follow me on instagrm : zaid_lh_00'
                      }
          ]
                      
